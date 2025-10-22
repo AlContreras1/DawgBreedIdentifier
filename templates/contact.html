@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="contact-section">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p class="intro">
+            Have questions or suggestions? We'd love to hear from you!  
+            Get in touch with the <strong>Fur-miliar Finder</strong> team.
+        </p>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Our Office</h2>
+                <p><strong>Address:</strong> Poblacion Ward 2, Minglanilla, PH</p>
+                <p><strong>Phone:</strong> +63 912 345 6789</p>
+                <p><strong>Email:</strong> support@furmiliarfinder.com</p>
+                <p><strong>Hours:</strong> Mon–Fri, 9AM–6PM</p>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

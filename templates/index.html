@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Home - Fur-miliar Finder{% endblock %}
+{% block content %}
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>What the woof? You haven't tried using this <span>PAW-fect Breed Decoder Website?</span></h1>
+        <p>Try now! For a pup-tastic breeds you haven't found out! </p>
+
+        <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="dog_image" accept="image/*" required>
+            <button type="submit">Upload & Identify</button>
+        </form>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://www.shutterstock.com/image-photo/adult-dog-golden-retriever-small-600nw-2252922629.jpg" alt="Dog and Cat">
+    </div>
+</section>
+
+{% endblock %}
