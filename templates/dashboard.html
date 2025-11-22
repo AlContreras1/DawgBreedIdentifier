@@ -4,5 +4,14 @@
 <section class="dashboard">
     <h1>Dashboard</h1>
     <p>Your uploaded images and breed predictions will appear here soon!</p>
+
+    <h2>Uploaded Dog Image</h2>
+
+    {% if uploaded_image %}
+        <img src="{{ url_for('static', filename='uploads/' + uploaded_image) }}" 
+             alt="Uploaded Dog" width="300">
+    {% else %}
+        <p>No image uploaded yet.</p>
+    {% endif %}
 </section>
 {% endblock %}

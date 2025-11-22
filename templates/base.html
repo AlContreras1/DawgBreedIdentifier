@@ -7,25 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h2> Breed Identifier</h2>
-        </div>
-        <nav>
-<a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">Home</a>
-<a href="{{ url_for('services') }}">Services</a>
-<a href="{{ url_for('about') }}">About</a>
-<a href="{{ url_for('contact') }}">Contact</a>
-<a href="{{ url_for('dashboard') }}">Dashboard</a>
-        </nav>
-    </header>
 
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% for category, message in messages %}
-            <p class="flash {{ category }}">{{ message }}</p>
-        {% endfor %}
-    {% endwith %}
+<header>
+    <h2> Fur-miliar Finder </h2>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
 
+<main>
     {% block content %}{% endblock %}
+</main>
+
 </body>
 </html>
